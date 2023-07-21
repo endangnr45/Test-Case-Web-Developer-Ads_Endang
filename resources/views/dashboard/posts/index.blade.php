@@ -1,3 +1,5 @@
+use Illuminate\Support\Str;
+
 @extends('layouts.main')
 <br><br>
 @section('container')
@@ -17,7 +19,7 @@
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-success">News</strong>
-                        <h3 class="mb-0">{{ $post->title }}</h3>
+                        <h3 class="mb-0">{{ Str::limit($post->title, 40, '...') }}</h3>
                         <div class="mb-1 text-muted">{{ $post->created_at->diffForHumans() }}</div>
                         <div><p class="card-text mb-auto"  >{{ $post->excerpt }}</p></div>
                         <a href="/news/posts/{{ $post->slug }}" class="stretched-link">Continue reading</a>

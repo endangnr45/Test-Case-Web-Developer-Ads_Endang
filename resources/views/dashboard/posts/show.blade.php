@@ -15,7 +15,7 @@
                 <img src="https://source.unsplash.com/1200x400?{{ $post->title }}"
                 @endif
                 <div class="mb-1 text-muted " style="text-align:center">{{ $post->updated_at }}</div>
-                <article class="my-3" style="text-align: center">
+                <article class="my-3" style="text-align: justify">
                 {!! $post->body !!}
             </article><br>
             <a href="/news "class="btn btn-secondary">Back</a>
